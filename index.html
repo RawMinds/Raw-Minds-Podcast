@@ -7,150 +7,171 @@
     <title>Raw Minds Podcast</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom background logo styling */
-        body {
-            background-image: url('https://raw.githubusercontent.com/RawMinds/Raw-Minds-Podcast/main/RawMinds%20Logo.jpg'); /* Background logo URL */
-            background-repeat: no-repeat;
+        /* Hero Section Styling */
+        .hero {
+            background-image: url('https://raw.githubusercontent.com/RawMinds/Raw-Minds-Podcast/main/RawMinds%20Logo.jpg');
+            background-size: cover;
             background-position: center;
-            background-size: 500px;
-            background-color: #1a1a1a; /* Dark background color */
-            background-attachment: fixed;
-            opacity: 0.9;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
+        .hero h1 {
+            font-size: 4rem;
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .hero p {
+            font-size: 1.5rem;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Navigation Bar Styling */
+        nav {
+            position: fixed;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            top: 0;
+            padding: 1rem;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            color: #00bfa5;
+        }
+
+        /* About Us Section */
+        .about-section {
+            padding: 3rem 1rem;
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+        }
+        .about-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .about-section p {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Episodes Section */
+        .episodes {
+            padding: 3rem 1rem;
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+        .episodes h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .episodes ul {
+            list-style: none;
+            padding: 0;
+        }
+        .episodes ul li {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        /* Contact Us Section */
+        .contact-section {
+            padding: 3rem 1rem;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+        .contact-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .contact-section form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-section input, 
+        .contact-section textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .contact-section button {
+            padding: 10px 20px;
+            background-color: #00bfa5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-section button:hover {
+            background-color: #00796b;
+        }
+
     </style>
 </head>
-<body class="bg-gray-800 text-white font-sans">
+<body>
 
-    <!-- Sidebar Section -->
-    <div class="flex">
-        <!-- Sidebar -->
-        <aside class="w-64 bg-gray-900 h-screen px-4 py-8">
-            <nav>
-                <ul class="space-y-4">
-                    <li><a href="#latest-episode" class="text-white w-full text-left">Episodes</a></li>
-                    <li><a href="#about-section" class="text-white w-full text-left">About Us</a></li>
-                    <li><a href="#resources-section" class="text-white w-full text-left">Resources</a></li>
-                    <li><a href="#shop-section" class="text-white w-full text-left">Shop (Coming Soon)</a></li>
-                    <li><a href="forms.html" class="text-white w-full text-left">Forms</a></li>
-                    <li><a href="#contact-section" class="text-white w-full text-left">Contact Us</a></li>
-                </ul>
-            </nav>
-        </aside>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#about-section">About Us</a></li>
+            <li><a href="#episodes-section">Episodes</a></li>
+            <li><a href="#contact-section">Contact Us</a></li>
+        </ul>
+    </nav>
 
-        <!-- Main Content Section -->
-        <main class="flex-grow p-10 bg-gray-800">
-            <!-- Introduction Section -->
-            <section id="intro" class="text-center">
-                <h2 class="text-3xl font-bold mb-4 text-white">Welcome to Raw Minds</h2>
-                <p class="max-w-2xl mx-auto text-gray-300">
-                    Join us as we dive deep into the often-untold struggles and victories surrounding men's mental health.
-                    No filters, no judgment – just real conversations with real people.
-                </p>
-            </section>
-
-            <!-- Latest Episode Section -->
-            <section id="latest-episode" class="bg-gray-900 py-10 px-4 mt-10 rounded-lg shadow-lg">
-                <h2 class="text-3xl font-bold text-white mb-6">Latest Episode</h2>
-                <div class="bg-gray-700 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold text-white">Raw Minds, Season 2, Episode 3: Anger and Aggression</h3>
-                    <p class="mb-4 text-gray-300">In this episode, we explore how men can deal with anger and aggression in healthy ways, providing real insights and strategies.</p>
-                    <div class="space-x-4">
-                        <a href="https://spotify.link-to-episode" target="_blank" class="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700">Listen on Spotify</a>
-                        <a href="https://youtube.link-to-episode" target="_blank" class="bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700">Watch on YouTube</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Social Media Section -->
-            <section id="social-media" class="py-10 px-4 bg-gray-900 mt-10 text-center">
-                <h2 class="text-3xl font-bold text-white mb-6">Follow Us on Social Media</h2>
-                <div class="space-x-4">
-                    <a href="https://instagram.com/yourprofile" target="_blank" class="bg-pink-600 text-white py-2 px-4 rounded-lg hover:bg-pink-700">Instagram</a>
-                    <a href="https://facebook.com/yourpage" target="_blank" class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Facebook</a>
-                    <a href="https://tiktok.com/@yourprofile" target="_blank" class="bg-black text-white py-2 px-4 rounded-lg hover:bg-gray-700">TikTok</a>
-                </div>
-            </section>
-
-            <!-- All Episodes Section -->
-            <section id="episodes" class="py-10 px-4 bg-gray-800">
-                <div class="max-w-4xl mx-auto">
-                    <h2 class="text-3xl font-bold text-white mb-6">All Episodes</h2>
-                    <ul class="list-disc list-inside text-gray-300">
-                        <li><a href="https://spotify.link-to-episode-1" class="text-green-400 hover:underline">Raw Minds, Season 1, Episode 1: The Journey Begins</a> | 
-                            <a href="https://youtube.link-to-episode-1" class="text-red-400 hover:underline">Watch on YouTube</a>
-                        </li>
-                        <li><a href="https://spotify.link-to-episode-2" class="text-green-400 hover:underline">Raw Minds, Season 2, Episode 1: Mental Health and Relationships</a> | 
-                            <a href="https://youtube.link-to-episode-2" class="text-red-400 hover:underline">Watch on YouTube</a>
-                        </li>
-                        <li><a href="https://spotify.link-to-episode-3" class="text-green-400 hover:underline">Raw Minds, Season 2, Episode 3: Anger and Aggression</a> | 
-                            <a href="https://youtube.link-to-episode-3" class="text-red-400 hover:underline">Watch on YouTube</a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- About Us Section -->
-            <section id="about-section" class="py-10 px-4 bg-gray-800 mt-10">
-                <h2 class="text-3xl font-bold text-white mb-6">About Us</h2>
-                <p class="max-w-2xl mx-auto mb-8 text-gray-300">Raw Minds is a podcast that sheds light on the struggles and triumphs of men's mental health. Our hosts, John Doe and Mark Smith, bring a range of personal and professional experiences to the show.</p>
-            </section>
-
-            <!-- Resources Section -->
-            <section id="resources-section" class="py-10 px-4 bg-gray-800 mt-10">
-                <h2 class="text-3xl font-bold text-white mb-6">Resources</h2>
-                <ul class="list-disc list-inside text-gray-300">
-                    <li><a href="https://www.menshealth.com" class="text-green-400 hover:underline">Men's Health</a></li>
-                    <li><a href="https://www.mind.org.uk" class="text-green-400 hover:underline">Mind UK</a></li>
-                    <li><a href="https://www.nimh.nih.gov" class="text-green-400 hover:underline">National Institute of Mental Health</a></li>
-                </ul>
-            </section>
-
-            <!-- Shop Section (Coming Soon) -->
-            <section id="shop-section" class="py-10 px-4 bg-gray-900 text-center">
-                <h2 class="text-3xl font-bold text-white mb-6">Shop Coming Soon</h2>
-                <p class="max-w-2xl mx-auto text-gray-300">Stay tuned for our exclusive Raw Minds merchandise – coming soon!</p>
-            </section>
-
-            <!-- Forms Section (Dedicated Page for Forms) -->
-            <section id="forms-section" class="py-10 px-4 bg-gray-900 text-center">
-                <h2 class="text-3xl font-bold text-white mb-6">Submit Your Question</h2>
-                <form class="bg-gray-800 p-6 rounded-lg shadow-md max-w-2xl mx-auto">
-                    <div class="mb-4">
-                        <label for="name" class="block text-sm font-medium text-gray-300">Name</label>
-                        <input type="text" id="name" name="name" class="w-full p-3 bg-gray-700 text-white rounded-lg" placeholder="Your Name">
-                    </div>
-                    <div class="mb-4">
-                        <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
-                        <input type="email" id="email" name="email" class="w-full p-3 bg-gray-700 text-white rounded-lg" placeholder="Your Email">
-                    </div>
-                    <div class="mb-4">
-                        <label for="question" class="block text-sm font-medium text-gray-300">Your Question</label>
-                        <textarea id="question" name="question" rows="5" class="w-full p-3 bg-gray-700 text-white rounded-lg" placeholder="Your Question"></textarea>
-                    </div>
-                    <button type="submit" class="w-full py-3 bg-green-600 text-white font-bold rounded-lg">Submit Question</button>
-                </form>
-            </section>
-
-            <!-- Contact Us Section -->
-            <section id="contact-section" class="py-10 px-4 bg-gray-900 text-center">
-                <h2 class="text-3xl font-bold text-white mb-6">Contact Us</h2>
-                <form class="bg-gray-800 p-6 rounded-lg shadow-md max-w-2xl mx-auto">
-                    <div class="mb-4">
-                        <label for="name-contact" class="block text-sm font-medium text-gray-300">Name</label>
-                        <input type="text" id="name-contact" name="name-contact" class="w-full p-3 bg-gray-700 text-white rounded-lg" placeholder="Your Name">
-                    </div>
-                    <div class="mb-4">
-                        <label for="email-contact" class="block text-sm font-medium text-gray-300">Email</label>
-                        <input type="email" id="email-contact" name="email-contact" class="w-full p-3 bg-gray-700 text-white rounded-lg" placeholder="Your Email">
-                    </div>
-                    <div class="mb-4">
-                        <label for="message-contact" class="block text-sm font-medium text-gray-300">Message</label>
-                        <textarea id="message-contact" name="message-contact" rows="5" class="w-full p-3 bg-gray-700 text-white rounded-lg" placeholder="Your Message"></textarea>
-                    </div>
-                    <button type="submit" class="w-full py-3 bg-green-600 text-white font-bold rounded-lg">Send Message</button>
-                </form>
-            </section>
-        </main>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div>
+            <h1>Raw Minds Podcast</h1>
+            <p>Real Conversations on Men's Mental Health</p>
+        </div>
     </div>
+
+    <!-- About Us Section -->
+    <section id="about-section" class="about-section">
+        <h2>About Us</h2>
+        <p>At Raw Minds, we dive deep into the often-untold struggles and victories surrounding men's mental health. Join us for raw conversations with real people, tackling the challenges that men face today.</p>
+    </section>
+
+    <!-- Episodes Section -->
+    <section id="episodes-section" class="episodes">
+        <h2>Latest Episodes</h2>
+        <ul>
+            <li><a href="https://spotify.link-to-episode" target="_blank">Raw Minds, Season 2, Episode 3: Anger and Aggression</a></li>
+            <li><a href="https://spotify.link-to-episode" target="_blank">Raw Minds, Season 2, Episode 2: Dealing with Stress</a></li>
+            <li><a href="https://spotify.link-to-episode" target="_blank">Raw Minds, Season 2, Episode 1: Mental Health and Relationships</a></li>
+        </ul>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact-section" class="contact-section">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
 </body>
 </html>
