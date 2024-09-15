@@ -7,144 +7,125 @@
     <title>Raw Minds Podcast</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Background logo styling */
-     <style>
-    /* Custom background logo styling */
-    body::before {
-        content: '';
-        background-image: url('https://github.com/RawMinds/Raw-Minds-Podcast/blob/main/RawMinds%20Logo.jpg?raw=true'); /* Your logo URL */
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 500px; /* Adjust size as needed */
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0.1; /* Adjust opacity to make the logo faint */
-        z-index: -1;
-    }
-</style>
-
+        /* Custom background logo styling */
+        body::before {
+            content: '';
+            background-image: url('https://raw.githubusercontent.com/yourusername/raw-minds-podcast/main/logo.png'); /* Replace with your logo URL */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 500px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1; /* Adjust opacity to make the logo faint */
+            z-index: -1;
+        }
+    </style>
 </head>
 <body class="bg-gray-800 text-white font-sans">
 
-    <!-- Sidebar -->
-    <div class="w-64 h-screen bg-gray-900 fixed top-0 left-0 flex flex-col py-8">
-        <div class="text-center text-2xl font-extrabold text-white mb-10">Raw Minds Podcast</div>
-        <ul class="space-y-4">
-            <li class="dropdown">
-                <a href="#" class="text-white hover:text-gray-400 px-4 py-2 block">Episodes</a>
-                <ul class="dropdown-content">
-                    <li><a href="#latest-episode" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Latest Episode</a></li>
-                    <li><a href="#episodes" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">All Episodes</a></li>
+    <!-- Sidebar Section -->
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-gray-900 h-screen px-4 py-8">
+            <nav>
+                <ul class="space-y-4">
+                    <li>
+                        <button class="text-white w-full text-left" onclick="toggleMenu('episodes')">
+                            Episodes
+                        </button>
+                        <ul id="episodes" class="hidden space-y-2 ml-4 mt-2">
+                            <li><a href="#latest-episode" class="text-green-400 hover:underline">Latest Episode</a></li>
+                            <li><a href="#episode1" class="text-green-400 hover:underline">Season 1, Episode 1</a></li>
+                            <li><a href="#episode2" class="text-green-400 hover:underline">Season 2, Episode 1</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="text-white w-full text-left" onclick="toggleMenu('hosts')">
+                            Hosts
+                        </button>
+                        <ul id="hosts" class="hidden space-y-2 ml-4 mt-2">
+                            <li><a href="#about" class="text-green-400 hover:underline">Meet the Hosts</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#about" class="text-white hover:underline">About Us</a></li>
+                    <li><a href="#contact" class="text-white hover:underline">Forms</a></li>
+                    <li><a href="#shop" class="text-white hover:underline">Shop (Coming Soon)</a></li>
+                    <li><a href="#resources" class="text-white hover:underline">Resources</a></li>
                 </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="text-white hover:text-gray-400 px-4 py-2 block">Hosts</a>
-                <ul class="dropdown-content">
-                    <li><a href="#about" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">About the Hosts</a></li>
-                </ul>
-            </li>
-            <li><a href="#about" class="text-white hover:text-gray-400 px-4 py-2 block">About Us</a></li>
-            <li><a href="#contact" class="text-white hover:text-gray-400 px-4 py-2 block">Contact Us</a></li>
-            <li><a href="#shop" class="text-white hover:text-gray-400 px-4 py-2 block">Shop</a></li>
-        </ul>
-    </div>
+            </nav>
+        </aside>
 
-    <!-- Main content area -->
-    <div class="ml-72 py-8">
+        <!-- Main Content Section -->
+        <main class="flex-grow p-10 bg-gray-800">
+            <!-- Introduction Section -->
+            <section id="intro" class="text-center">
+                <h2 class="text-3xl font-bold mb-4 text-white">Welcome to Raw Minds</h2>
+                <p class="max-w-2xl mx-auto text-gray-300">
+                    Join us as we dive deep into the often-untold struggles and victories surrounding men's mental health.
+                    No filters, no judgment – just real conversations with real people.
+                </p>
+            </section>
 
-        <!-- Header Section -->
-        <header class="text-center py-8 bg-gray-900">
-            <h1 class="text-5xl font-extrabold text-white tracking-widest">Raw Minds Podcast</h1>
-            <p class="text-lg text-gray-400 mt-4">Men's Mental Health. Unfiltered.</p>
-        </header>
-
-        <!-- Introduction Section -->
-        <section id="intro" class="px-4 py-10 text-center bg-gray-800">
-            <h2 class="text-3xl font-bold mb-4 text-white">Welcome to Raw Minds</h2>
-            <p class="max-w-2xl mx-auto text-gray-300">
-                Join us as we dive deep into the often-untold struggles and victories surrounding men's mental health.
-                No filters, no judgment – just real conversations with real people.
-            </p>
-        </section>
-
-        <!-- Latest Episode Section -->
-        <section id="latest-episode" class="bg-gray-900 py-10 px-4">
-            <div class="max-w-4xl mx-auto">
+            <!-- Latest Episode Section -->
+            <section id="latest-episode" class="bg-gray-900 py-10 px-4 mt-10 rounded-lg shadow-lg">
                 <h2 class="text-3xl font-bold text-white mb-6">Latest Episode</h2>
                 <div class="bg-gray-700 p-6 rounded-lg shadow-md">
                     <h3 class="text-xl font-bold text-white">Raw Minds, Season 2, Episode 3: Anger and Aggression</h3>
                     <p class="mb-4 text-gray-300">In this episode, we explore how men can deal with anger and aggression in healthy ways, providing real insights and strategies.</p>
-                    <audio controls class="w-full">
-                        <source src="episode3.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
+                    <!-- Buttons for Spotify and YouTube -->
+                    <div class="space-x-4">
+                        <a href="https://spotify.link-to-episode" target="_blank" class="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700">Listen on Spotify</a>
+                        <a href="https://youtube.link-to-episode" target="_blank" class="bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700">Watch on YouTube</a>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Podcast Episode List -->
-        <section id="episodes" class="py-10 px-4 bg-gray-800">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold text-white mb-6">All Episodes</h2>
-                <ul class="list-disc list-inside text-gray-300">
-                    <li>
-                        <a href="episode1.mp3" class="text-green-400 hover:underline">
-                            Raw Minds, Season 1, Episode 1: The Journey Begins
-                        </a>
-                    </li>
-                    <li>
-                        <a href="episode2.mp3" class="text-green-400 hover:underline">
-                            Raw Minds, Season 2, Episode 1: Mental Health and Relationships
-                        </a>
-                    </li>
-                    <li>
-                        <a href="episode2.mp3" class="text-green-400 hover:underline">
-                            Raw Minds, Season 2, Episode 2: Coping with Anxiety
-                        </a>
-                    </li>
-                    <li>
-                        <a href="episode3.mp3" class="text-green-400 hover:underline">
-                            Raw Minds, Season 2, Episode 3: Anger and Aggression
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
+            <!-- All Episodes Section -->
+            <section id="episodes" class="py-10 px-4 bg-gray-800">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-white mb-6">All Episodes</h2>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>
+                            <a href="https://spotify.link-to-episode-1" class="text-green-400 hover:underline">
+                                Raw Minds, Season 1, Episode 1: The Journey Begins
+                            </a> | 
+                            <a href="https://youtube.link-to-episode-1" class="text-red-400 hover:underline">
+                                Watch on YouTube
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://spotify.link-to-episode-2" class="text-green-400 hover:underline">
+                                Raw Minds, Season 2, Episode 1: Mental Health and Relationships
+                            </a> | 
+                            <a href="https://youtube.link-to-episode-2" class="text-red-400 hover:underline">
+                                Watch on YouTube
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://spotify.link-to-episode-3" class="text-green-400 hover:underline">
+                                Raw Minds, Season 2, Episode 3: Anger and Aggression
+                            </a> | 
+                            <a href="https://youtube.link-to-episode-3" class="text-red-400 hover:underline">
+                                Watch on YouTube
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
 
-        <!-- About Section with Host Biographies -->
-        <section id="about" class="py-10 px-4 bg-gray-800">
-            <div class="max-w-4xl mx-auto text-center">
+            <!-- About Section -->
+            <section id="about" class="py-10 px-4 bg-gray-800 mt-10">
                 <h2 class="text-3xl font-bold text-white mb-6">About Us</h2>
                 <p class="max-w-2xl mx-auto mb-8 text-gray-300">Raw Minds is more than just a podcast. It's a movement to bring light to the often-ignored struggles of men's mental health. Meet the voices behind Raw Minds below.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-gray-900 p-6 rounded-lg shadow-md">
-                        <img src="host1.jpg" alt="Host 1" class="rounded-full h-32 w-32 mx-auto mb-4">
-                        <h3 class="text-xl font-bold text-white">John Doe</h3>
-                        <p class="text-gray-400">John is a mental health advocate and one of the founding voices of Raw Minds. With a background in therapy, he brings both personal and professional insights into the conversations.</p>
-                    </div>
-                    <div class="bg-gray-900 p-6 rounded-lg shadow-md">
-                        <img src="host2.jpg" alt="Host 2" class="rounded-full h-32 w-32 mx-auto mb-4">
-                        <h3 class="text-xl font-bold text-white">Mark Smith</h3>
-                        <p class="text-gray-400">Mark is a former athlete who has been open about his mental health struggles and how he overcame them. He's passionate about helping others speak up about their mental health journeys.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Shop Section (Coming Soon) -->
-        <section id="shop" class="bg-gray-900 py-10 px-4 text-center">
-            <h2 class="text-3xl font-bold text-white mb-6">Shop Coming Soon</h2>
-            <p class="max-w-2xl mx-auto text-gray-300">Stay tuned for our exclusive Raw Minds merchandise – coming soon!</p>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-10 px-4 bg-gray-800">
-            <div class="max-w-4xl mx-auto">
+            <!-- Contact Section -->
+            <section id="contact" class="py-10 px-4 bg-gray-900 mt-10">
                 <h2 class="text-3xl font-bold text-white mb-6 text-center">Contact Us</h2>
-                <form class="bg-gray-900 p-6 rounded-lg shadow-md max-w-2xl mx-auto">
+                <form class="bg-gray-800 p-6 rounded-lg shadow-md max-w-2xl mx-auto">
                     <div class="mb-4">
                         <label for="name" class="block text-sm font-medium text-gray-300">Name</label>
                         <input type="text" id="name" name="name" class="w-full p-3 bg-gray-700 text-white rounded-lg" placeholder="Your Name">
@@ -159,15 +140,24 @@
                     </div>
                     <button type="submit" class="w-full py-3 bg-green-600 text-white font-bold rounded-lg">Send Message</button>
                 </form>
-            </div>
-        </section>
-
-        <!-- Footer Section -->
-        <footer class="text-center py-8 bg-gray-900">
-            <p class="text-sm text-gray-400">&copy; 2024 Raw Minds Podcast. All rights reserved.</p>
-        </footer>
-
+            </section>
+        </main>
     </div>
-    
+
+    <script>
+        // Function to toggle drop-down menus
+        function toggleMenu(id) {
+            const menu = document.getElementById(id);
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        }
+    </script>
+
+</body>
+</html>
+
 </body>
 </html>
