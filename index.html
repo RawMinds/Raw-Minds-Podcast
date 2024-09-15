@@ -8,19 +8,14 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         /* Custom background logo styling */
-        body::before {
-            content: '';
-            background-image: url('https://raw.githubusercontent.com/RawMinds/Raw-Minds-Podcast/main/RawMinds%20Logo.jpg'); /* Replace with your logo URL */
+        body {
+            background-image: url('https://raw.githubusercontent.com/RawMinds/Raw-Minds-Podcast/main/RawMinds%20Logo.jpg'); /* Background logo URL */
             background-repeat: no-repeat;
             background-position: center;
             background-size: 500px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.1; /* Adjust opacity to make the logo faint */
-            z-index: -1;
+            background-color: #1a1a1a; /* Dark background color */
+            background-attachment: fixed;
+            opacity: 0.9;
         }
     </style>
 </head>
@@ -32,24 +27,12 @@
         <aside class="w-64 bg-gray-900 h-screen px-4 py-8">
             <nav>
                 <ul class="space-y-4">
-                    <li>
-                        <a href="#latest-episode" class="text-white w-full text-left">Episodes</a>
-                    </li>
-                    <li>
-                        <a href="#about" class="text-white w-full text-left">About Us</a>
-                    </li>
-                    <li>
-                        <a href="#resources" class="text-white w-full text-left">Resources</a>
-                    </li>
-                    <li>
-                        <a href="#shop" class="text-white w-full text-left">Shop (Coming Soon)</a>
-                    </li>
-                    <li>
-                        <a href="#forms" class="text-white w-full text-left">Forms</a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="text-white w-full text-left">Contact Us</a>
-                    </li>
+                    <li><a href="#latest-episode" class="text-white w-full text-left">Episodes</a></li>
+                    <li><a href="#about-section" class="text-white w-full text-left">About Us</a></li>
+                    <li><a href="#resources-section" class="text-white w-full text-left">Resources</a></li>
+                    <li><a href="#shop-section" class="text-white w-full text-left">Shop (Coming Soon)</a></li>
+                    <li><a href="forms.html" class="text-white w-full text-left">Forms</a></li>
+                    <li><a href="#contact-section" class="text-white w-full text-left">Contact Us</a></li>
                 </ul>
             </nav>
         </aside>
@@ -71,11 +54,20 @@
                 <div class="bg-gray-700 p-6 rounded-lg shadow-md">
                     <h3 class="text-xl font-bold text-white">Raw Minds, Season 2, Episode 3: Anger and Aggression</h3>
                     <p class="mb-4 text-gray-300">In this episode, we explore how men can deal with anger and aggression in healthy ways, providing real insights and strategies.</p>
-                    <!-- Buttons for Spotify and YouTube -->
                     <div class="space-x-4">
                         <a href="https://spotify.link-to-episode" target="_blank" class="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700">Listen on Spotify</a>
                         <a href="https://youtube.link-to-episode" target="_blank" class="bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700">Watch on YouTube</a>
                     </div>
+                </div>
+            </section>
+
+            <!-- Social Media Section -->
+            <section id="social-media" class="py-10 px-4 bg-gray-900 mt-10 text-center">
+                <h2 class="text-3xl font-bold text-white mb-6">Follow Us on Social Media</h2>
+                <div class="space-x-4">
+                    <a href="https://instagram.com/yourprofile" target="_blank" class="bg-pink-600 text-white py-2 px-4 rounded-lg hover:bg-pink-700">Instagram</a>
+                    <a href="https://facebook.com/yourpage" target="_blank" class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Facebook</a>
+                    <a href="https://tiktok.com/@yourprofile" target="_blank" class="bg-black text-white py-2 px-4 rounded-lg hover:bg-gray-700">TikTok</a>
                 </div>
             </section>
 
@@ -84,47 +76,27 @@
                 <div class="max-w-4xl mx-auto">
                     <h2 class="text-3xl font-bold text-white mb-6">All Episodes</h2>
                     <ul class="list-disc list-inside text-gray-300">
-                        <li>
-                            <a href="https://spotify.link-to-episode-1" class="text-green-400 hover:underline">
-                                Raw Minds, Season 1, Episode 1: The Journey Begins
-                            </a> | 
-                            <a href="https://youtube.link-to-episode-1" class="text-red-400 hover:underline">
-                                Watch on YouTube
-                            </a>
+                        <li><a href="https://spotify.link-to-episode-1" class="text-green-400 hover:underline">Raw Minds, Season 1, Episode 1: The Journey Begins</a> | 
+                            <a href="https://youtube.link-to-episode-1" class="text-red-400 hover:underline">Watch on YouTube</a>
                         </li>
-                        <li>
-                            <a href="https://spotify.link-to-episode-2" class="text-green-400 hover:underline">
-                                Raw Minds, Season 2, Episode 1: Mental Health and Relationships
-                            </a> | 
-                            <a href="https://youtube.link-to-episode-2" class="text-red-400 hover:underline">
-                                Watch on YouTube
-                            </a>
+                        <li><a href="https://spotify.link-to-episode-2" class="text-green-400 hover:underline">Raw Minds, Season 2, Episode 1: Mental Health and Relationships</a> | 
+                            <a href="https://youtube.link-to-episode-2" class="text-red-400 hover:underline">Watch on YouTube</a>
                         </li>
-                        <li>
-                            <a href="https://spotify.link-to-episode-3" class="text-green-400 hover:underline">
-                                Raw Minds, Season 2, Episode 3: Anger and Aggression
-                            </a> | 
-                            <a href="https://youtube.link-to-episode-3" class="text-red-400 hover:underline">
-                                Watch on YouTube
-                            </a>
+                        <li><a href="https://spotify.link-to-episode-3" class="text-green-400 hover:underline">Raw Minds, Season 2, Episode 3: Anger and Aggression</a> | 
+                            <a href="https://youtube.link-to-episode-3" class="text-red-400 hover:underline">Watch on YouTube</a>
                         </li>
                     </ul>
                 </div>
             </section>
 
             <!-- About Us Section -->
-            <section id="about" class="py-10 px-4 bg-gray-900 mt-10 rounded-lg">
+            <section id="about-section" class="py-10 px-4 bg-gray-800 mt-10">
                 <h2 class="text-3xl font-bold text-white mb-6">About Us</h2>
-                <p class="text-gray-300">
-                    Raw Minds is a podcast that sheds light on the struggles and triumphs of men's mental health. With no filters or judgments, our conversations dive deep into real issues affecting men today.
-                </p>
-                <p class="text-gray-300 mt-4">
-                    Our hosts, John Doe and Mark Smith, bring a range of personal and professional experiences to the show, making it an essential resource for men everywhere.
-                </p>
+                <p class="max-w-2xl mx-auto mb-8 text-gray-300">Raw Minds is a podcast that sheds light on the struggles and triumphs of men's mental health. Our hosts, John Doe and Mark Smith, bring a range of personal and professional experiences to the show.</p>
             </section>
 
             <!-- Resources Section -->
-            <section id="resources" class="py-10 px-4 bg-gray-800 mt-10">
+            <section id="resources-section" class="py-10 px-4 bg-gray-800 mt-10">
                 <h2 class="text-3xl font-bold text-white mb-6">Resources</h2>
                 <ul class="list-disc list-inside text-gray-300">
                     <li><a href="https://www.menshealth.com" class="text-green-400 hover:underline">Men's Health</a></li>
@@ -134,16 +106,14 @@
             </section>
 
             <!-- Shop Section (Coming Soon) -->
-            <section id="shop" class="py-10 px-4 bg-gray-900 mt-10 text-center">
+            <section id="shop-section" class="py-10 px-4 bg-gray-900 text-center">
                 <h2 class="text-3xl font-bold text-white mb-6">Shop Coming Soon</h2>
-                <p class="text-gray-300">
-                    Stay tuned for our exclusive Raw Minds merchandise – coming soon!
-                </p>
+                <p class="max-w-2xl mx-auto text-gray-300">Stay tuned for our exclusive Raw Minds merchandise – coming soon!</p>
             </section>
 
-            <!-- Forms Section -->
-            <section id="forms" class="py-10 px-4 bg-gray-900 mt-10 rounded-lg">
-                <h2 class="text-3xl font-bold text-white mb-6 text-center">Submit Your Questions</h2>
+            <!-- Forms Section (Dedicated Page for Forms) -->
+            <section id="forms-section" class="py-10 px-4 bg-gray-900 text-center">
+                <h2 class="text-3xl font-bold text-white mb-6">Submit Your Question</h2>
                 <form class="bg-gray-800 p-6 rounded-lg shadow-md max-w-2xl mx-auto">
                     <div class="mb-4">
                         <label for="name" class="block text-sm font-medium text-gray-300">Name</label>
@@ -154,8 +124,33 @@
                         <input type="email" id="email" name="email" class="w-full p-3 bg-gray-700 text-white rounded-lg" placeholder="Your Email">
                     </div>
                     <div class="mb-4">
-                        <label for="message" class="block text-sm font-medium text-gray-300">Question</label>
-                        <textarea id="message" name="message" rows="5" class="w-full p-3 bg-gray-700 text-white rounded-lg" placeholder="Your Question"></textarea>
+                        <label for="question" class="block text-sm font-medium text-gray-300">Your Question</label>
+                        <textarea id="question" name="question" rows="5" class="w-full p-3 bg-gray-700 text-white rounded-lg" placeholder="Your Question"></textarea>
                     </div>
-                    <button type="submit" class
+                    <button type="submit" class="w-full py-3 bg-green-600 text-white font-bold rounded-lg">Submit Question</button>
+                </form>
+            </section>
 
+            <!-- Contact Us Section -->
+            <section id="contact-section" class="py-10 px-4 bg-gray-900 text-center">
+                <h2 class="text-3xl font-bold text-white mb-6">Contact Us</h2>
+                <form class="bg-gray-800 p-6 rounded-lg shadow-md max-w-2xl mx-auto">
+                    <div class="mb-4">
+                        <label for="name-contact" class="block text-sm font-medium text-gray-300">Name</label>
+                        <input type="text" id="name-contact" name="name-contact" class="w-full p-3 bg-gray-700 text-white rounded-lg" placeholder="Your Name">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email-contact" class="block text-sm font-medium text-gray-300">Email</label>
+                        <input type="email" id="email-contact" name="email-contact" class="w-full p-3 bg-gray-700 text-white rounded-lg" placeholder="Your Email">
+                    </div>
+                    <div class="mb-4">
+                        <label for="message-contact" class="block text-sm font-medium text-gray-300">Message</label>
+                        <textarea id="message-contact" name="message-contact" rows="5" class="w-full p-3 bg-gray-700 text-white rounded-lg" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 bg-green-600 text-white font-bold rounded-lg">Send Message</button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
