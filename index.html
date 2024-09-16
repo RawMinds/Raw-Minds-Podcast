@@ -51,7 +51,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            background: rgba(0, 0, 0, 0.5);
             z-index: 1;
         }
         .hero h1, .hero p {
@@ -83,6 +83,9 @@
             list-style: none;
             gap: 20px;
         }
+        nav ul li {
+            position: relative;
+        }
         nav ul li a {
             color: white;
             font-size: 1.2rem;
@@ -92,7 +95,7 @@
             color: #00bfa5;
         }
 
-        /* Drop-down Menu for Social Media */
+        /* Drop-down Menu for Social Media, Resources, and Shop */
         .dropdown {
             display: none;
             position: absolute;
@@ -102,6 +105,9 @@
             padding: 10px;
             border-radius: 5px;
         }
+        nav ul li:hover .dropdown {
+            display: block;
+        }
         .dropdown a {
             color: white;
             display: block;
@@ -110,9 +116,6 @@
         }
         .dropdown a:hover {
             background-color: #00bfa5;
-        }
-        nav ul li:hover .dropdown {
-            display: block;
         }
 
         /* Image Styling for Hosts */
@@ -225,8 +228,22 @@
             </li>
             <li><a href="#about-section">About Us</a></li>
             <li><a href="#episodes-section">Episodes</a></li>
+            <li>
+                <a href="#">Resources</a>
+                <div class="dropdown">
+                    <a href="https://www.nami.org" target="_blank">Mental Health - U.S. (NAMI)</a>
+                    <a href="https://cmha.ca" target="_blank">Mental Health - Canada (CMHA)</a>
+                    <a href="https://www.mind.org.uk" target="_blank">Mental Health - U.K. (Mind UK)</a>
+                </div>
+            </li>
+            <li>
+                <a href="#">Shop</a>
+                <div class="dropdown">
+                    <a href="#">Clothing - Coming Soon</a>
+                    <a href="#">Accessories - Coming Soon</a>
+                </div>
+            </li>
             <li><a href="#contact-section">Contact Us</a></li>
-            <li><a href="#resources-section" id="resources-link">Resources</a></li>
             <li><a href="#host-section">Meet the Hosts</a></li>
         </ul>
     </nav>
@@ -293,19 +310,18 @@
     </section>
 
     <!-- Episode Archive Section -->
-<section class="archive">
-    <h2>Episode Archive</h2>
-    <ul>
-        <li><a href="https://www.youtube.com/watch?v=0dZOH9hc3Lc&list=PL3G0HY6uA73RFKhE8Iy78zbAfX-mSA3qi&index=40" target="_blank">Raw Minds Ep. 1 - Grief and Loss</a></li>
-        <li><a href="https://www.youtube.com/watch?v=W4iNwhpQj5c&list=PL3G0HY6uA73RFKhE8Iy78zbAfX-mSA3qi&index=39" target="_blank">Raw Minds Ep. 2 - Depression and Anxiety</a></li>
-        <li><a href="https://www.youtube.com/watch?v=dR0hWh6I6qA&list=PL3G0HY6uA73RFKhE8Iy78zbAfX-mSA3qi&index=38" target="_blank">Raw Minds Ep. 3 - Mental Struggles of Co-parenting</a></li>
-    </ul>
-</section>
+    <section class="archive">
+        <h2>Episode Archive</h2>
+        <ul>
+            <li><a href="https://www.youtube.com/watch?v=0dZOH9hc3Lc&list=PL3G0HY6uA73RFKhE8Iy78zbAfX-mSA3qi&index=40" target="_blank">Raw Minds Ep. 1 - Grief and Loss</a></li>
+            <li><a href="https://www.youtube.com/watch?v=W4iNwhpQj5c&list=PL3G0HY6uA73RFKhE8Iy78zbAfX-mSA3qi&index=39" target="_blank">Raw Minds Ep. 2 - Depression and Anxiety</a></li>
+            <li><a href="https://www.youtube.com/watch?v=dR0hWh6I6qA&list=PL3G0HY6uA73RFKhE8Iy78zbAfX-mSA3qi&index=38" target="_blank">Raw Minds Ep. 3 - Mental Struggles of Co-parenting</a></li>
+        </ul>
+    </section>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Raw Minds on Men's Mental Health. All rights reserved.</p>
-        <p><a href="#about-section">About Us</a> | <a href="#episodes-section">Episodes</a> | <a href="#contact-section">Contact Us</a> | <a href="#resources-section" id="resources-link">Resources</a> | <a href="#host-section">Meet the Hosts</a></p>
+        <p>&copy; 2024 Raw Minds Podcast. All rights reserved.</p>
         <div class="social-links">
             <a href="https://www.facebook.com/profile.php?id=61555496635533" target="_blank">Facebook</a>
             <a href="https://www.instagram.com/rawmindspodcast/" target="_blank">Instagram</a>
@@ -313,13 +329,6 @@
             <a href="https://www.youtube.com/@RawMinds-cs3ci" target="_blank">YouTube</a>
         </div>
     </footer>
-
-    <script>
-        document.getElementById('resources-link').addEventListener('click', function(event) {
-            event.preventDefault();
-            alert('Resources section is under construction.');
-        });
-    </script>
 
 </body>
 </html>
