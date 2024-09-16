@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Raw Minds Podcast</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -19,13 +19,13 @@
             text-align: center;
         }
         .hero h1 {
-            font-size: 3rem;
+            font-size: 4rem;
             color: white;
             font-weight: bold;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             color: white;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
@@ -37,55 +37,15 @@
             background-color: rgba(0, 0, 0, 0.8);
             top: 0;
             padding: 1rem;
-        }
-        nav ul {
-            display: flex;
-            justify-content: space-between;
-            list-style: none;
-        }
-        nav ul li {
-            margin: 0 15px;
-            position: relative;
-        }
-        nav ul li a {
-            color: white;
-            font-size: 1.2rem;
-            text-decoration: none;
-        }
-        nav ul li a:hover {
-            color: #00bfa5;
-        }
-
-        /* Drop-down Menu */
-        .dropdown {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.9);
-            padding: 10px;
-            border-radius: 5px;
             z-index: 100;
         }
-        .dropdown a {
-            color: white;
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-        }
-        .dropdown a:hover {
-            background-color: #00bfa5;
-        }
-        nav ul li:hover .dropdown {
-            display: block;
-        }
-
-        /* Social Media Links Styling */
-        .social-links {
+        nav .social-links {
             display: flex;
-            gap: 10px;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 1rem;
         }
-        .social-links a {
+        nav .social-links a {
             color: white;
             font-size: 1.5rem;
             padding: 0.5rem;
@@ -93,8 +53,21 @@
             border-radius: 50%;
             text-decoration: none;
         }
-        .social-links a:hover {
+        nav .social-links a:hover {
             background-color: #00bfa5;
+        }
+        nav .menu {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        nav .menu a {
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+        nav .menu a:hover {
+            color: #00bfa5;
         }
 
         /* About Us Section */
@@ -113,36 +86,23 @@
             margin: 0 auto;
         }
 
-        /* Latest Episode Section */
-        .latest-episode {
-            padding: 2rem 1rem;
+        /* Episodes Section */
+        .episodes {
+            padding: 3rem 1rem;
             background-color: #f1f1f1;
             text-align: center;
         }
-        .latest-episode h2 {
-            font-size: 2rem;
+        .episodes h2 {
+            font-size: 2.5rem;
             margin-bottom: 1rem;
         }
-        .latest-episode .episode-details {
-            background-color: #333;
-            color: white;
-            padding: 1rem;
-            border-radius: 10px;
-            max-width: 600px;
-            margin: 0 auto;
-            font-size: 0.9rem;
+        .episodes ul {
+            list-style: none;
+            padding: 0;
         }
-        .latest-episode .episode-details h3 {
+        .episodes ul li {
+            margin-bottom: 1rem;
             font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-        .latest-episode .episode-details p {
-            margin-bottom: 1rem;
-        }
-        .latest-episode .episode-details a {
-            padding: 0.5rem 1rem;
-            margin: 0.5rem;
-            font-size: 0.9rem;
         }
 
         /* Meet the Host Section */
@@ -156,12 +116,12 @@
         }
         .host img {
             border-radius: 50%;
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             object-fit: cover;
         }
         .host h3 {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             margin: 1rem 0;
         }
 
@@ -172,7 +132,7 @@
             text-align: center;
         }
         .resources-section h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
         }
         .resources-section ul {
@@ -181,7 +141,7 @@
         }
         .resources-section ul li {
             margin-bottom: 1rem;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
         .resources-section ul li a {
             color: #00bfa5;
@@ -234,35 +194,21 @@
 
     <!-- Navigation Bar -->
     <nav>
-        <ul>
-            <!-- Social Media Links -->
-            <li class="social-links">
-                <a href="https://facebook.com/yourprofile" target="_blank">F</a>
-                <a href="https://instagram.com/yourprofile" target="_blank">I</a>
-                <a href="https://tiktok.com/@yourprofile" target="_blank">T</a>
-            </li>
+        <!-- Social Media Links -->
+        <div class="social-links">
+            <a href="https://facebook.com/yourprofile" target="_blank">F</a>
+            <a href="https://instagram.com/yourprofile" target="_blank">I</a>
+            <a href="https://tiktok.com/@yourprofile" target="_blank">T</a>
+        </div>
 
-            <!-- Navigation Menu -->
-            <li><a href="#about-section">About Us</a></li>
-            <li>
-                <a href="#">Meet the Host</a>
-                <!-- Drop-down Menu for Hosts -->
-                <div class="dropdown">
-                    <a href="#host1">John Doe</a>
-                    <a href="#host2">Mark Smith</a>
-                </div>
-            </li>
-            <li>
-                <a href="#latest-episode">Episodes</a>
-                <!-- Drop-down Menu for Episodes -->
-                <div class="dropdown">
-                    <a href="https://spotify.link-to-episode-1" target="_blank">Episode 1: The Journey Begins</a>
-                    <a href="https://spotify.link-to-episode-2" target="_blank">Episode 2: Mental Health and Relationships</a>
-                    <a href="https://spotify.link-to-episode-3" target="_blank">Episode 3: Anger and Aggression</a>
-                </div>
-            </li>
-            <li><a href="#contact-section">Contact Us</a></li>
-        </ul>
+        <!-- Navigation Menu -->
+        <div class="menu">
+            <a href="#about-section">About Us</a>
+            <a href="#episodes-section">Episodes</a>
+            <a href="#contact-section">Contact Us</a>
+            <a href="#resources-section">Resources</a>
+            <a href="#host-section">Meet the Hosts</a>
+        </div>
     </nav>
 
     <!-- Hero Section -->
@@ -277,4 +223,42 @@
     <section id="about-section" class="about-section">
         <h2>About Us</h2>
         <p>At Raw Minds, we dive deep into the often-untold struggles and victories surrounding men's mental health. Join us for raw conversations with real people, tackling the challenges that men face today.</p>
-   
+    </section>
+
+    <!-- Episodes Section -->
+    <section id="episodes-section" class="episodes">
+        <h2>Latest Episodes</h2>
+        <ul>
+            <li><a href="https://spotify.link-to-episode" target="_blank">Raw Minds, Season 2, Episode 3: Anger and Aggression</a></li>
+            <li><a href="https://spotify.link-to-episode" target="_blank">Raw Minds, Season 2, Episode 2: Dealing with Stress</a></li>
+            <li><a href="https://spotify.link-to-episode" target="_blank">Raw Minds, Season 2, Episode 1: Mental Health and Relationships</a></li>
+        </ul>
+    </section>
+
+    <!-- Meet the Host Section -->
+    <section id="host-section" class="host-section">
+        <h2>Meet the Hosts</h2>
+        <div id="host1" class="host">
+            <img src="https://via.placeholder.com/150" alt="John Doe">
+            <h3>John Doe</h3>
+            <p>John is the co-host of Raw Minds Podcast. He brings years of experience in mental health advocacy and loves discussing how men can manage their emotions better.</p>
+        </div>
+
+        <div id="host2" class="host">
+            <img src="https://via.placeholder.com/150" alt="Mark Smith">
+            <h3>Mark Smith</h3>
+            <p>Mark is the second host of Raw Minds Podcast, bringing humor and real-life stories to the show.</p>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources-section" class="resources-section">
+        <h2>Resources</h2>
+        <ul>
+            <li><a href="https://www.mind.org.uk" target="_blank">Mind UK</a></li>
+            <li><a href="https://www.samaritans.org" target="_blank">Samaritans</a></li>
+            <li><a href="https://www.mentalhealth.org.uk" target="_blank">Mental Health Foundation</a></li>
+        </ul>
+    </section>
+
+    <!-- Contact Us Section
