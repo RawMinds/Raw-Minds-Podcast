@@ -152,14 +152,9 @@
             margin: 0 auto;
         }
 
-        /* Featured Guests Section */
-        .featured-guests {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin-top: 2rem;
+        /* Center Host Names */
+        .host h3 {
+            text-align: center;
         }
 
         /* Center Content */
@@ -169,6 +164,16 @@
             align-items: center;
             text-align: center;
             flex-direction: column;
+        }
+
+        /* Featured Guests Section */
+        .featured-guests {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
         /* Newsletter Signup */
@@ -258,6 +263,34 @@
             justify-content: center;
             gap: 1rem;
         }
+
+        /* Contact Us Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #00bfa5;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #00796b;
+        }
     </style>
 </head>
 <body>
@@ -300,7 +333,8 @@
     <div class="hero center-content">
         <h1>Raw Minds Podcast</h1>
         <p>Real Conversations on Men's Mental Health</p>
-        <a href="#episodes-section" class="btn-primary">Listen Now</a>
+        <a href="https://www.tiktok.com/@rawmindspodcast" class="btn-primary">Listen Now</a>
+        <p style="color: white; margin-top: 10px;">We would appreciate if you could comment, like, and leave a review on our page!</p>
     </div>
 
     <!-- About Us Section -->
@@ -368,6 +402,20 @@
             <li><a href="https://www.youtube.com/watch?v=W4iNwhpQj5c&list=PL3G0HY6uA73RFKhE8Iy78zbAfX-mSA3qi&index=39" target="_blank">Raw Minds Ep. 2 - Depression and Anxiety</a></li>
             <li><a href="https://www.youtube.com/watch?v=dR0hWh6I6qA&list=PL3G0HY6uA73RFKhE8Iy78zbAfX-mSA3qi&index=38" target="_blank">Raw Minds Ep. 3 - Mental Struggles of Co-parenting</a></li>
         </ul>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact-section" class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form action="mailto:Rawmindspodcast@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p>If you'd like to be a guest or reach out, please email us directly at <a href="mailto:Rawmindspodcast@gmail.com">Rawmindspodcast@gmail.com</a>.</p>
+        </div>
     </section>
 
     <!-- Social Proof Section -->
