@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Raw Minds Podcast</title>
+    <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Mailchimp CSS -->
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
     <style>
         /* Global Styling */
         body {
@@ -207,6 +210,15 @@
             justify-content: center;
             gap: 1rem;
         }
+
+        /* Mailchimp Form Styling */
+        #mc_embed_signup {
+            background: #fff;
+            clear: left;
+            font: 14px Helvetica, Arial, sans-serif;
+            width: 600px;
+            margin: 0 auto; /* Center the form */
+        }
     </style>
 </head>
 <body>
@@ -217,10 +229,10 @@
             <li>
                 <a href="#">Social Media Links</a>
                 <div class="dropdown">
-                   <a href="https://www.facebook.com/profile.php?id=61555496635533" target="_blank">Facebook</a>
-                   <a href="https://www.instagram.com/rawmindspodcast/" target="_blank">Instagram</a>
-                   <a href="https://www.tiktok.com/@rawmindspodcast" target="_blank">TikTok</a>
-                   <a href="https://www.youtube.com/@RawMinds-cs3ci" target="_blank">YouTube</a>
+                    <a href="https://www.facebook.com/profile.php?id=61555496635533" target="_blank">Facebook</a>
+                    <a href="https://www.instagram.com/rawmindspodcast/" target="_blank">Instagram</a>
+                    <a href="https://www.tiktok.com/@rawmindspodcast" target="_blank">TikTok</a>
+                    <a href="https://www.youtube.com/@RawMinds-cs3ci" target="_blank">YouTube</a>
                 </div>
             </li>
             <li><a href="#about-section">About Us</a></li>
@@ -263,11 +275,38 @@
     <section class="newsletter">
         <h2>Join Our Newsletter</h2>
         <p>Stay updated with the latest episodes and news from Raw Minds Podcast!</p>
-        <form>
-```html
-            <input type="email" placeholder="Enter your email" required>
-            <button type="submit">Subscribe</button>
-        </form>
+        <!-- Mailchimp Signup Form -->
+        <div id="mc_embed_signup">
+            <form action="https://app.us22.list-manage.com/subscribe/post?u=b91ff6cd289d3cc6e44019351&amp;id=ed3a4ca7b0&amp;f_id=008ad7e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                <div id="mc_embed_signup_scroll">
+                    <h2>Subscribe</h2>
+                    <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                    <div class="mc-field-group">
+                        <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                        <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required value="">
+                    </div>
+                    <div id="mce-responses" class="clear foot">
+                        <div class="response" id="mce-error-response" style="display: none;"></div>
+                        <div class="response" id="mce-success-response" style="display: none;"></div>
+                    </div>
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="b_b91ff6cd289d3cc6e44019351_ed3a4ca7b0" tabindex="-1" value="">
+                    </div>
+                    <div class="optionalParent">
+                        <div class="clear foot">
+                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                            <p style="margin: 0px auto;">
+                                <a href="http://eepurl.com/iY2OR2" title="Mailchimp - email marketing made easy and fun">
+                                    <span style="display: inline-block; background-color: transparent; border-radius: 4px;">
+                                        <img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;">
+                                    </span>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
     </section>
 
     <!-- Testimonials Section -->
@@ -297,6 +336,25 @@
             <a href="https://www.youtube.com/@RawMinds-cs3ci" target="_blank">YouTube</a>
         </div>
     </footer>
+
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Mailchimp Validation Script -->
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script type="text/javascript">
+    (function($) {
+        window.fnames = new Array();
+        window.ftypes = new Array();
+        fnames[0]='EMAIL';ftypes[0]='email';
+        fnames[1]='FNAME';ftypes[1]='text';
+        fnames[2]='LNAME';ftypes[2]='text';
+        fnames[3]='ADDRESS';ftypes[3]='address';
+        fnames[4]='PHONE';ftypes[4]='phone';
+        fnames[5]='BIRTHDAY';ftypes[5]='birthday';
+        fnames[6]='COMPANY';ftypes[6]='text';
+    }(jQuery));
+    var $mcj = jQuery.noConflict(true);
+    </script>
 
 </body>
 </html>
