@@ -39,35 +39,45 @@
             padding: 1rem;
             z-index: 100;
         }
-        nav .social-links {
+        nav ul {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-bottom: 1rem;
+            list-style: none;
+            gap: 20px;
         }
-        nav .social-links a {
-            color: white;
-            font-size: 1.5rem;
-            padding: 0.5rem;
-            background-color: #333;
-            border-radius: 50%;
-            text-decoration: none;
+        nav ul li {
+            position: relative;
         }
-        nav .social-links a:hover {
-            background-color: #00bfa5;
-        }
-        nav .menu {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-        nav .menu a {
+        nav ul li a {
             color: white;
             font-size: 1.2rem;
             text-decoration: none;
         }
-        nav .menu a:hover {
+        nav ul li a:hover {
             color: #00bfa5;
+        }
+
+        /* Drop-down Menu for Social Media */
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .dropdown a {
+            color: white;
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .dropdown a:hover {
+            background-color: #00bfa5;
+        }
+        nav ul li:hover .dropdown {
+            display: block;
         }
 
         /* About Us Section */
@@ -194,21 +204,22 @@
 
     <!-- Navigation Bar -->
     <nav>
-        <!-- Social Media Links -->
-        <div class="social-links">
-            <a href="https://facebook.com/yourprofile" target="_blank">F</a>
-            <a href="https://instagram.com/yourprofile" target="_blank">I</a>
-            <a href="https://tiktok.com/@yourprofile" target="_blank">T</a>
-        </div>
-
-        <!-- Navigation Menu -->
-        <div class="menu">
-            <a href="#about-section">About Us</a>
-            <a href="#episodes-section">Episodes</a>
-            <a href="#contact-section">Contact Us</a>
-            <a href="#resources-section">Resources</a>
-            <a href="#host-section">Meet the Hosts</a>
-        </div>
+        <ul>
+            <li>
+                <a href="#">Social Media Links</a>
+                <!-- Drop-down Menu for Social Media -->
+                <div class="dropdown">
+                    <a href="https://facebook.com/yourprofile" target="_blank">Facebook</a>
+                    <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
+                    <a href="https://tiktok.com/@yourprofile" target="_blank">TikTok</a>
+                </div>
+            </li>
+            <li><a href="#about-section">About Us</a></li>
+            <li><a href="#episodes-section">Episodes</a></li>
+            <li><a href="#contact-section">Contact Us</a></li>
+            <li><a href="#resources-section">Resources</a></li>
+            <li><a href="#host-section">Meet the Hosts</a></li>
+        </ul>
     </nav>
 
     <!-- Hero Section -->
@@ -239,15 +250,21 @@
     <section id="host-section" class="host-section">
         <h2>Meet the Hosts</h2>
         <div id="host1" class="host">
-            <img src="https://via.placeholder.com/150" alt="John Doe">
-            <h3>John Doe</h3>
-            <p>John is the co-host of Raw Minds Podcast. He brings years of experience in mental health advocacy and loves discussing how men can manage their emotions better.</p>
+            <img src="https://via.placeholder.com/150" alt="Eric">
+            <h3>Eric</h3>
+            <p>Eric is the main host of Raw Minds Podcast, leading conversations on men's mental health and wellness with an open heart and deep insights.</p>
         </div>
 
         <div id="host2" class="host">
-            <img src="https://via.placeholder.com/150" alt="Mark Smith">
-            <h3>Mark Smith</h3>
-            <p>Mark is the second host of Raw Minds Podcast, bringing humor and real-life stories to the show.</p>
+            <img src="https://via.placeholder.com/150" alt="Joey">
+            <h3>Joey</h3>
+            <p>Joey is a co-host of Raw Minds Podcast, adding humor and a fresh perspective on men's mental health challenges.</p>
+        </div>
+
+        <div id="host3" class="host">
+            <img src="https://via.placeholder.com/150" alt="Anthony">
+            <h3>Anthony</h3>
+            <p>Anthony is the second co-host, bringing real-life experiences and personal stories to the Raw Minds Podcast, helping men navigate their mental health journeys with relatable and impactful insights.</p>
         </div>
     </section>
 
@@ -261,4 +278,16 @@
         </ul>
     </section>
 
-    <!-- Contact Us Section
+    <!-- Contact Us Section -->
+    <section id="contact-section" class="contact-section">
+        <h2>Contact Us</h2>
+        <form action="mailto:rawmindspodcast@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+</body>
+</html>
